@@ -1,1 +1,1 @@
-# My personal configurations for wezterm and neovim on WSL and Windows
+configurations for wezterm and neovim on WSL2 and Windows
