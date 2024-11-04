@@ -21,6 +21,21 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
   },
+  -- Add this in your LazyVim configuration file, typically in `init.lua`
+
+    {
+        "EdenEast/nightfox.nvim",
+        config = function()
+            require("nightfox").setup({
+                options = {
+                    -- Apply any specific Nightfox options here
+                }
+            })
+            vim.cmd("colorscheme carbonfox")  -- Set default theme to carbonfox
+        end,
+    },
+
+
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
     -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
@@ -30,7 +45,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "carbonfox"} },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
